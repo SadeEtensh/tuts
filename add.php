@@ -1,13 +1,17 @@
 <?php
 
-if(isset($_GET['submit'])) {
-    echo $_GET['email'] . '</br>';
-    echo $_GET['title'] .'</br>';
-    echo $_GET['ingredients'] . '</br>';
+// if(isset($_GET['submit'])) {
+//     echo $_GET['email'] . '</br>';
+//     echo $_GET['title'] .'</br>';
+//     echo $_GET['ingredients'] . '</br>';
+// }
+
+
+if(isset($_POST['submit'])){
+    echo $_POST['email'] . '<br />';
+    echo $_POST['title'] . '<br />';
+    echo $_POST['ingredients'] . '<br />';
 }
-
-
-
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +21,7 @@ if(isset($_GET['submit'])) {
 
 <section class="container grey-text" >
     <h4 class="center">Add Pizza</h4>
-    <form class="white" action="add.php" method="GET">
+    <form class="white" action="add.php" method="POST">
         <label >Your Email: </lable>
         <input type="text" name="email">
         <label >Pizza Title: </lable>
